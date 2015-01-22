@@ -50,7 +50,7 @@ plugins=(git)
 
 # User configuration
 
-export GOPATH=$HOME/Development/Go
+export GOPATH=$HOME/Go
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/go/bin:/Users/wyatt/.rbenv/shims:/Users/wyatt/Development/Go/bin:/usr/local/opt/go/libexec/bin:~/.rbenv/shims:~/opt/terraform:~/.bin"
 export BAT_CHARGE=$HOME/.bin/batcharge.py
 # export MANPATH="/usr/local/man:$MANPATH"
