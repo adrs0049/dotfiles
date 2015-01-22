@@ -41,19 +41,3 @@ alias gwc='git whatchanged -p --abbrev-commit --pretty=medium'
 # Go to current project
 alias p='cd `cat $HOME/.current_project`'
 alias p.='echo `pwd` > $HOME/.current_project'
-
-## Code7
-alias cg='cd ~/Work/Code7/GitHub'
-alias c7='cd ~/Work/Code7/GitHub/c7/c7.se/'
-alias forks='cd ~/Work/Code7/GitHub/forks'
-alias experiments='cd ~/Work/Code7/Experiments/'
-
-## TV4
-alias 4='cd ~/Work/Athega/TV4/GitHub'
-alias tv4-redis-server='redis-server /Users/peter/Work/Athega/TV4/tv4-redis/tv4-redis.conf'
-alias tv4-redis-cli='redis-cli -s /tmp/tv4-redis.sock'
-alias tv4='cd ~/Work/Athega/TV4/GitHub/www.tv4.se/'
-alias tv4play='cd ~/Work/Athega/TV4/GitHub/tv4play/'
-alias aman='cd ~/Work/Athega/TV4/GitHub/aman/'
-alias api4='cd ~/Work/Athega/TV4/GitHub/api4/'
-alias misc02='ssh -l tv4-http tv4-se-misc02.sth.basefarm.net'

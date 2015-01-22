@@ -31,7 +31,7 @@ export PATH=$PATH:$OOC_LIBS/sam:$OOC_LIBS/rock/bin
 
 # Go
 export GOPATH=$HOME/Go
-export PATH=$PATH:$GOPATH/bin
+export PATH=$PATH:$GOPATH/bin:/usr/local/opt/go/libexec/bin
 
 # Git
 source /usr/local/etc/bash_completion.d/git-completion.bash
@@ -43,7 +43,7 @@ export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/9.3/bin
 
 # Docker
 export DOCKER_HOST=tcp://192.168.59.103:2376
-export DOCKER_CERT_PATH=/Users/peter/.boot2docker/certs/boot2docker-vm
+export DOCKER_CERT_PATH=$HOME/.boot2docker/certs/boot2docker-vm
 export DOCKER_TLS_VERIFY=1
 
 # Coreutils gnubin
@@ -91,14 +91,6 @@ export PATH=$PATH:/usr/local/share/npm/bin
 # Homebrew
 export PATH=/usr/local/sbin:/usr/local/bin:$PATH
 
-# Ruby
-export GUARD_NOTIFY=false
-export RUBY_GC_HEAP_INIT_SLOTS=1800000  # (10000)
-export RUBY_HEAP_FREE_MIN=20000         # (4096)
-export RUBY_HEAP_SLOTS_INCREMENT=300000 # (10000)
-export RUBY_HEAP_SLOTS_GROWTH_FACTOR=1  # (1.8)
-export RUBY_GC_MALLOC_LIMIT=85000000    # (8000000)
-
 # Colors!
 export CLICOLOR=1
 export LSCOLORS=HxbxfxdxCxegedafahacad
@@ -107,11 +99,3 @@ export GREP_COLOR='1;35;40'
 
 # Load aliases
 [[ -s "$HOME/.aliases" ]] && source "$HOME/.aliases"
-
-### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
-
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-
-# added by travis gem
-[ -f /Users/peter/.travis/travis.sh ] && source /Users/peter/.travis/travis.sh

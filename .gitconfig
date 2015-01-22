@@ -1,12 +1,12 @@
 [user]
-  name = Peter Hellberg
-  email = peter@c7.se
+  name = Wyatt Johnson
+  email = wyattjoh@gmail.com
 [push]
   default = upstream
 [apply]
   whitespace = nowarn
 [core]
-  excludesfile = /Users/peter/.gitignore
+  excludesfile = $HOME/.gitignore
 [alias]
   l = log --graph --pretty=format:'%C(yellow)%h %Cgreen%ae%Creset (%ar): %s'
   churn = !git --no-pager log --name-only --oneline | grep -v ' ' | sort | uniq -c | sort -nr | head
