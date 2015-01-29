@@ -1,11 +1,9 @@
 # Aliases
-alias vim='mvim -n -v -N'
 alias mvim='mvim -n -N -c "set noballooneval"'
 alias :q='logout'
 alias rake_with_verbose_tests="rake TESTOPTS='-v'"
 alias require='cd ~ && pry -r'
 alias irb='pry || irb'
-alias ls='gls --color -F'
 alias be='bundle exec'
 alias go-pi='GOARCH=arm GOARM=5 GOOS=linux go'
 alias jsc='/System/Library/Frameworks/JavaScriptCore.framework/Versions/A/Resources/jsc'
@@ -41,3 +39,6 @@ alias gwc='git whatchanged -p --abbrev-commit --pretty=medium'
 # Go to current project
 alias p='cd `cat $HOME/.current_project`'
 alias p.='echo `pwd` > $HOME/.current_project'
+
+alias pbcopy='xsel --clipboard --input'
+alias pbpaste='xsel --clipboard --output'

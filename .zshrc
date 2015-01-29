@@ -5,8 +5,8 @@ export ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-# ZSH_THEME="robbyrussell"
-ZSH_THEME="prose"
+ZSH_THEME="norm"
+# ZSH_THEME="prose"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -51,11 +51,14 @@ plugins=(git)
 # User configuration
 
 export GOPATH=$HOME/Go
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/go/bin:/Users/wyatt/.rbenv/shims:/Users/wyatt/Development/Go/bin:/usr/local/opt/go/libexec/bin:~/.rbenv/shims:~/opt/terraform:~/.bin"
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/go/bin:$HOME/.rbenv/shims:$HOME/Go/bin:/usr/local/opt/go/libexec/bin:~/.rbenv/shims:~/opt/terraform:~/.bin"
 export BAT_CHARGE=$HOME/.bin/batcharge.py
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
+
+export VISUAL=vim
+export EDITOR="$VISUAL"
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
@@ -81,3 +84,6 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+# Load aliases
+[[ -s "$HOME/.aliases" ]] && source "$HOME/.aliases"
