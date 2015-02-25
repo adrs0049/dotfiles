@@ -99,3 +99,6 @@ export GREP_COLOR='1;35;40'
 
 # Load aliases
 [[ -s "$HOME/.aliases" ]] && source "$HOME/.aliases"
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"

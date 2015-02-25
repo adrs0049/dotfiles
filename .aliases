@@ -14,7 +14,7 @@ alias chat='ssh -i ~/.ssh/ssh-chat.rsa peterhellberg@chat.shazow.net'
 alias local-ssh-chat='ssh-chat --bind 0.0.0.0:2200 -i ~/.ssh/ssh-chat.rsa --admin 8e:08:d6:e0:65:0c:c0:9c:8c:b4:18:f6:6b:41:d3:fc'
 
 # Service aliases
-alias mongod='mongod run --config /usr/local/etc/mongod.conf'
+alias run-mongod='mongod run --config /usr/local/etc/mongod.conf'
 alias elasticsearch_start='elasticsearch -f -D es.config=/usr/local/opt/elasticsearch/config/elasticsearch.yml'
 alias default-redis-server='cd && redis-server /usr/local/etc/redis.conf'
 alias volatile-redis-server='cd && redis-server /usr/local/etc/volatile-redis.conf'
