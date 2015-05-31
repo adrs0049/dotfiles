@@ -1,9 +1,42 @@
-set mark-symlinked-directories on
-set completion-ignore-case On
+$include /etc/inputrc
+
+set completion-ignore-case on
 set expand-tilde on
-set convert-meta off
-set input-meta on
-set output-meta on
 set show-all-if-ambiguous on
+set show-all-if-unmodified on
+set skip-completed-text on
+
 set visible-stats on
-set -o vi
+set editing-mode vi
+
+set show-mode-in-prompt on
+set colored-stats on
+
+set keymap vi-insert
+
+"\C-l": clear-screen
+"\C-p": history-search-backward
+"\C-n": history-search-forward
+"\C-o": menu-complete
+"\C-k": menu-complete-backward
+
+$if bash
+    "\C-x\C-x": "\C-[0isudo \C-[0"
+    "\C-x\C-s": "\C-[ddiscreen\n"
+    "\C-x\C-t": "\C-[dditmux new -s ''\C-[i"
+$endif
+
+set keymap vi-command
+
+"\C-p": history-search-backward
+"\C-n": history-search-forward
+
+# switch to insert mode before new line
+"\n": "i\n"
+"\r": "i\r"
+
+$if bash
+    "\C-x\C-x": "0isudo \C-[0"
+    "\C-x\C-s": "ddiscreen\n"
+    "\C-x\C-t": "dditmux new -s ''\C-[i"
+$endif
