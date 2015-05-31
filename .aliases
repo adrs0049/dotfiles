@@ -1,23 +1,10 @@
 # Aliases
-alias mvim='mvim -n -N -c "set noballooneval"'
+alias vim='vim'
+alias nano='nano -c'
+alias emacs='emacs -nw'
 alias :q='logout'
-alias rake_with_verbose_tests="rake TESTOPTS='-v'"
-alias require='cd ~ && pry -r'
-alias irb='pry || irb'
-alias be='bundle exec'
-alias go-pi='GOARCH=arm GOARM=5 GOOS=linux go'
-alias jsc='/System/Library/Frameworks/JavaScriptCore.framework/Versions/A/Resources/jsc'
 alias curl='curl -s'
 alias curl-with-time='curl -w "connect: %{time_connect} start_transfer: %{time_starttransfer} total: %{time_total}\n"'
-alias plot-data='curl --data-binary @- plot-data.herokuapp.com'
-alias chat='ssh -i ~/.ssh/ssh-chat.rsa peterhellberg@chat.shazow.net'
-alias local-ssh-chat='ssh-chat --bind 0.0.0.0:2200 -i ~/.ssh/ssh-chat.rsa --admin 8e:08:d6:e0:65:0c:c0:9c:8c:b4:18:f6:6b:41:d3:fc'
-
-# Service aliases
-alias run-mongod='mongod run --config /usr/local/etc/mongod.conf'
-alias elasticsearch_start='elasticsearch -f -D es.config=/usr/local/opt/elasticsearch/config/elasticsearch.yml'
-alias default-redis-server='cd && redis-server /usr/local/etc/redis.conf'
-alias volatile-redis-server='cd && redis-server /usr/local/etc/volatile-redis.conf'
 
 # Git related aliases
 alias g='git'
@@ -42,3 +29,63 @@ alias p.='echo `pwd` > $HOME/.current_project'
 
 alias pbcopy='xsel --clipboard --input'
 alias pbpaste='xsel --clipboard --output'
+
+# here so it#s picked up by zsh
+alias ls='ls --color=auto'
+alias grep='grep --colour=auto'
+alias egrep='egrep --colour=auto'
+alias fgrep='fgrep --colour=auto'
+alias sgrep='grep -R -n -H -C 5 --exclude-dir={.git,.svn,CVS} '
+
+alias lh='ls -Shl --group-directories-first'
+alias ldir='ls -d */'
+
+alias l='ls -lFh'
+alias la='ls -lAFh'
+alias lr='ls -tRFh'
+alias lt='ls -l'
+alias ll='ls -l'
+alias ldot='ls -d .*'
+alias lS='ls -1FSsh'
+alias lart='ls -1Fcart'
+alias lrt='ls -1Fcrt'
+alias hidden='ls -a | grep "^\."'
+
+alias zshrc='vim ~/.zshrc'
+alias t='tail -f'
+
+# command line head / tail
+alias H='| head'
+alias T='| tail'
+alias G='| grep'
+alias L="| less"
+alias M="| most"
+alias LL="2>&1 | less"
+alias CA="2>&1 | cat -A"
+alias NE="2> /dev/null"
+alias NUL="> /dev/null 2>&1"
+alias P="2>&1| pygmentize -l pytb"
+
+alias dud='du -d 1 -h'
+alias duf='du -sh *'
+alias du='du -ach | sort -h'
+alias df='df -Tha --total'
+alias free='free -mt'
+alias ps='ps auxf'
+alias psg="ps aux | grep -v grep | grep -i -e VSZ -e"
+alias fd='find . -type d -name'
+alias ff='find . -type f -name'
+
+alias h='history'
+alias hgrep="history | grep"
+alias help='man'
+alias p='ps -f'
+alias sortnr='sort -n -r'
+alias unexport='unset'
+
+alias whereami=display_info
+
+alias rm='rm -i'
+alias cp='cp -i'
+alias mv='mv -i'
+
